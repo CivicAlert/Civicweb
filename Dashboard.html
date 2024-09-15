@@ -52,6 +52,9 @@
     border-radius: 50% !important;
    
 }
+.dashboard_list{
+    list-style: none;
+}
 
 .nav ul {
     list-style-type: none;
@@ -243,11 +246,13 @@
                     <div class="report-card" id="report-card">
                         <h3 id="incident-type"></h3>
                         <img src="CSS/dashboard.png">
-                        <p><strong>Report Description:</strong> <span id="report-description"></span></p>
-                        <p><strong>Location:</strong> <span id="report-location"></span></p>
-                        <p><strong>Status:</strong> <span id="report-status"></span></p>
-                        <p><strong>Reference Id:</strong> <span id="report-ref-number"></span></p>
-                        <img id="report-image" style="display: none;" alt="Report Image">
+                        <ul class="dashboard_list">
+                     <li>  <p><strong>Report Description:</strong> <span id="report-description"></span></p></li>
+                      <li> <p><strong>Location:</strong> <span id="report-location"></span></p></li>
+                       <li><p><strong>Status:</strong> <span id="report-status"></span></p></li>
+                       <li> <p><strong>Reference Id:</strong> <span id="report-ref-number"></span></p></li>
+
+                    </ul>
                     </div>
                     <div class="report-navigation" id="report-navigation">
                         <button id="prevReport">Previous</button>
