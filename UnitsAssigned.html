@@ -2,94 +2,131 @@
 <html lang="en">
 <head>
 <style>
-        /* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    display: flex;
-}
-.nav ul {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-}
-
-.nav li {
-    width: 100%;
-    margin-bottom: 10px;
-}
-.sidebar {
-    width: 250px !important;
-    background: #f4f4f4 !important;
-    padding: 20px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-}
-
-.logo img {
-    width: 100px !important;
-}
-
-.profile img {
-    width: 80px !important;
-    border-radius: 50% !important;
-}
-
-.nav button {
-    width: 100% !important;
-    padding: 10px !important;
-    margin: 5px 0 !important;
-    background: #fff !important;
-    border: 1px solid #ddd !important;
-    cursor: pointer !important;
-}
-
-.logout {
-    margin-top: auto !important;
-    padding: 10px 20px !important;
-    background: #d9534f !important;
-    color: white !important;
-    border: none !important;
-    cursor: pointer !important;
-}
-
-.content {
-    flex: 1 !important;
-    padding: 20px !important;
-}
-
-h1 {
-    margin-top: 0 !important;
-}
-
-#reports-container {
-    margin-top: 20px !important;
-}
-
-.report-section {
-    margin-bottom: 20px !important;
-}
-
-.report-section h2 {
-    background: #007bff !important;
-    color: white !important;
-    padding: 10px !important;
-}
-
-.report-section table {
-    width: 100% !important;
-    border-collapse: collapse !important;
-}
-
-.report-section table, .report-section th, .report-section td {
-    border: 1px solid #ddd !important;
-}
-
-.report-section th, .report-section td {
-    padding: 10px !important;
-    text-align: left !important;
-}
+    /* styles.css */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+    }
+    .nav ul {
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .nav li {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .sidebar {
+        width: 250px !important;
+        background: #f4f4f4 !important;
+        padding: 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .logo img {
+        width: 100px !important;
+    }
+    
+    .profile img {
+        width: 80px !important;
+        border-radius: 50% !important;
+    }
+    
+    .nav button {
+        width: 100% !important;
+        padding: 10px !important;
+        margin: 5px 0 !important;
+        background: #fff !important;
+        border: 1px solid #ddd !important;
+        cursor: pointer !important;
+    }
+    
+    .logout {
+        margin-top: auto !important;
+        padding: 10px 20px !important;
+        background: #d9534f !important;
+        color: white !important;
+        border: none !important;
+        cursor: pointer !important;
+    }
+    
+    .content {
+        flex: 1 !important;
+        padding: 20px !important;
+    }
+    
+    h1 {
+        margin-top: 0 !important;
+    }
+    
+    #reports-container {
+        margin-top: 20px !important;
+    }
+    
+    .report-section {
+        margin-bottom: 20px !important;
+    }
+    
+    .report-section h2 {
+        background: #007bff !important;
+        color: white !important;
+        padding: 10px !important;
+    }
+    
+    .report-section table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+    }
+    
+    .report-section table, .report-section th, .report-section td {
+        border: 1px solid #ddd !important;
+    }
+    
+    .report-section th, .report-section td {
+        padding: 10px !important;
+        text-align: left !important;
+    }
+    /* Styling for the "View" button */
+    button[data-toggle="modal"] {
+        background-color: #007bff; /* Bootstrap primary blue color */
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    button[data-toggle="modal"]:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+    
+    button[data-toggle="modal"]:focus {
+        outline: none; /* Remove the outline on focus */
+    }
+    
+    button[data-toggle="modal"]:active {
+        background-color: #003f7f; /* Even darker blue when active/clicked */
+    }
+    
+    button[data-toggle="modal"]:disabled {
+        background-color: #cccccc; /* Gray for disabled button */
+        cursor: not-allowed;
+    }
+    
+    /* Optional - add more styling for mobile responsiveness */
+    @media (max-width: 768px) {
+        button[data-toggle="modal"] {
+            font-size: 12px;
+            padding: 8px 10px;
+        }
+    }
 
 </style>
     <meta charset="UTF-8">

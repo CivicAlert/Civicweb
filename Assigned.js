@@ -116,35 +116,35 @@ function displayReports(reports) {
     });
 }
 
+function getSpecializationByEmail(email) {
+    const specializationMap = {
+        'eskom@gmail.com': 'Electricity',
+        'water@gmail.com': 'Water',
+        'road@gmail.com': 'Pothole',
+        // Add more specializations as needed
+    };
+
+    return specializationMap[email] || null;
+}
+
 onAuthStateChanged(auth, (user) => {
     if (user) {
-        loggedInUser = user;
-        console.log('Logged in user:', loggedInUser.email); // Add this to log the logged-in user's email
+        const loggedInUser = user;
+        console.log('Logged in user:', loggedInUser.email); // Log the logged-in user's email
 
-        // Assign specialization based on the user's email
-        let specialization = '';
-        switch (loggedInUser.email) {
-            case 'eskom@gmail.com':
-                specialization = 'Electricity';
-                break;
-            case 'water@gmail.com':
-                specialization = 'Water';
-                break;
-            case 'road@gmail.com':
-                specialization = 'Pothole';
-                break;
-            // Add other cases for different specializations
-            default:
-                console.log('No specialization found for the user.');
-                break;
+        const specialization = getSpecializationByEmail(loggedInUser.email);
+        console.log('Specialization:', specialization);
+
+        if (specialization) {
+            fetchReports(specialization);
+        } else {
+            console.log('No specialization found for the user.');
         }
-
-        console.log('Specialization:', specialization); // Log the specialization
-        fetchReports(specialization); // Fetch reports after specialization is set
     } else {
         console.log('No user is signed in.');
     }
 });
+
 
 async function fetchReports(specialization) {
     const dbRef = ref(db);
