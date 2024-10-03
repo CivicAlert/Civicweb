@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <title>Civic Alert - Report Presentation</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <style>
-   body {
+<style>
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     display: flex;
@@ -57,20 +60,18 @@
     border: none !important;
     cursor: pointer !important;
 }
-
-        .main-content {
+.main-content {
             flex: 1;
             padding: 20px;
             box-sizing: border-box;
             background-color: #ecf0f1;
         }
-
-        .main-content h1 {
+ .main-content h1 {
             font-size: 24px;
             margin-bottom: 20px;
         }
 
-        .stats {
+.stats {
             display: flex;
             justify-content: space-between;
             margin-bottom: 30px;
@@ -376,29 +377,28 @@
 <meta http-equiv="refresh" content="30">
 </head>
 
-<body>
-        <aside class="sidebar">
-            <div class="logo">
-                <img src="Images/logo.jpg" alt="Civic Alert Logo">
-            </div>
-            <div class="profile">
-                <img src="Images/profileicon.jpeg" alt="Profile Picture">
-                <p>Municipality</p>
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li><button onclick="window.location.href = '/dashboard.html'"><img src="Images/dashboard.png" height="20" width="20">Dashboard</button></li>
-                    <li><button onclick="window.location.href = '/OpenReports.html'"><img src="Images/opened.jpeg" height="20" width="20">Open Reports</button></li>
-                    <li><button onclick="window.location.href = '/Unassigned.html'"><img src="Images/unassigneddd.png" height="20" width="20">Unassigned Reports</button></li>
-                    <li><button onclick="window.location.href = '/assignedincidents.html'"><img src="Images/asigned.png" height="20" width="20">Assigned Reports</button></li>
-                    <li><button onclick="window.location.href = '/Closedincidents.html'"><img src="CSS/Closed .png" height="20" width="20">Closed Incidents</button></li>
-                    <li><button onclick="window.location.href = '/Incidents.html'"><img src="Images/reports.jpeg" height="20" width="20">Reports</button></li>
-                </ul>
-            </nav>
-            <a href="Login.html">
-                <button class="logout">Log out</button>
-            </a>
-        </aside>
+<aside class="sidebar">
+    <div class="logo">
+        <img src="Images/logo.jpg" alt="Civic Alert Logo">
+    </div>
+    <div class="profile">
+        <img src="Images/profileicon.jpeg" alt="Profile Picture">
+        <p>Municipality</p>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li><button onclick="window.location.href = '/dashboard.html'"><img src="Images/dashboard.png" height="20" width="20">Dashboard</button></li>
+            <li><button onclick="window.location.href = '/OpenReports.html'"><img src="Images/opened.jpeg" height="20" width="20">Open Reports</button></li>
+            <li><button onclick="window.location.href = '/Unassigned.html'"><img src="Images/unassigneddd.png" height="20" width="20">Unassigned Reports</button></li>
+            <li><button onclick="window.location.href = '/assignedincidents.html'"><img src="Images/asigned.png" height="20" width="20">Assigned Reports</button></li>
+            <li><button onclick="window.location.href = '/Closedincidents.html'"><img src="CSS/Closed .png" height="20" width="20">Closed Incidents</button></li>
+            <li><button onclick="window.location.href = '/Incidents.html'"><img src="Images/reports.jpeg" height="20" width="20">Reports</button></li>
+        </ul>
+    </nav>
+    <a href="Login.html">
+        <button class="logout">Log out</button>
+    </a>
+</aside>
 
         <main class="main-content">
             <h1>Incidents Overview</h1>
