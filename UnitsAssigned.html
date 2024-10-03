@@ -1,58 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+    <meta charset="UTF-8">
+    <title>Civic Alert - assignedincidents</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <head>
-<style>
-        /* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    display: flex;
-}
-.nav ul {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-}
-
-.nav li {
-    width: 100%;
-    margin-bottom: 10px;
-}
-.sidebar {
-    width: 250px !important;
-    background: #f4f4f4 !important;
-    padding: 20px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-}
-
-.logo img {
-    width: 100px !important;
-}
-
-.profile img {
-    width: 80px !important;
-    border-radius: 50% !important;
-}
-
-.nav button {
-    width: 100% !important;
-    padding: 10px !important;
-    margin: 5px 0 !important;
-    background: #fff !important;
-    border: 1px solid #ddd !important;
-    cursor: pointer !important;
-}
-
-.logout {
-    margin-top: auto !important;
-    padding: 10px 20px !important;
-    background: #d9534f !important;
-    color: white !important;
-    border: none !important;
-    cursor: pointer !important;
-}
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+    }
+    .nav ul {
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .nav li {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .sidebar {
+        width: 250px !important;
+        background: #f4f4f4 !important;
+        padding: 20px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .logo img {
+        width: 100px !important;
+    }
+    
+    .profile img {
+        width: 80px !important;
+        border-radius: 50% !important;
+    }
+    
+    .nav button {
+        width: 100% !important;
+        padding: 10px !important;
+        margin: 5px 0 !important;
+        background: #fff !important;
+        border: 1px solid #ddd !important;
+        cursor: pointer !important;
+    }
+    
+    .logout {
+        margin-top: auto !important;
+        padding: 10px 20px !important;
+        background: #d9534f !important;
+        color: white !important;
+        border: none !important;
+        cursor: pointer !important;
+    }
 
 .content {
     flex: 1 !important;
@@ -113,12 +115,18 @@ h1 {
             <p>Municipality</p>
         </div>
         <nav class="nav">
-            <ul><li><button onclick="window.location.href = '/UnitsDashboard.html'"><img src="CSS/dashboard.png" height="20" width="20">Dashboard</button></li>   
-                <li><button onclick="window.location.href = '/UnitsAssigned.html'"><img src="Images/asigned.png" height="20" width="20">Assigned Reports</button></li>
-                <li><button onclick="window.location.href = '/Closedincidents.html'"><img src="Images/Closed.png" height="20" width="20">Closed Reports</button></li>
+            <ul>
+                <li><button onclick="window.location.href = '/dashboard.html'"><img src="Images/dashboard.png" height="20" width="20">Dashboard</button></li>
+                <li><button onclick="window.location.href = '/OpenReports.html'"><img src="Images/opened.jpeg" height="20" width="20">Open Reports</button></li>
+                <li><button onclick="window.location.href = '/Unassigned.html'"><img src="Images/unassigneddd.png" height="20" width="20">Unassigned Reports</button></li>
+                <li><button onclick="window.location.href = '/assignedincidents.html'"><img src="Images/asigned.png" height="20" width="20">Assigned Reports</button></li>
+                <li><button onclick="window.location.href = '/Closedincidents.html'"><img src="CSS/Closed .png" height="20" width="20">Closed Incidents</button></li>
+                <li><button onclick="window.location.href = '/Incidents.html'"><img src="Images/reports.jpeg" height="20" width="20">Reports</button></li>
             </ul>
         </nav>
-        <a  href="Login.html"> <button  class="logout">Log out</button></a>
+        <a href="Login.html">
+            <button class="logout">Log out</button>
+        </a>
     </aside>
     <div class="content">
         <h1>Assigned Reports</h1>
